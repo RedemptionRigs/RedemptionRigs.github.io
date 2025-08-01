@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<!--
+	Redemption Rigs by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+  <head>
+    <title>Free Consultation</title>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, user-scalable=no"
+    />
+    <link rel="stylesheet" href="assets/css/main.css" />
+    <noscript>
+      <link rel="stylesheet" href="assets/css/noscript.css" />
+    </noscript>
+
+    <style>
+
+
+      /* Custom Form Styles */
+      #estimate-form input[type="text"],
+      #estimate-form input[type="email"],
+      #estimate-form input[type="tel"],
+      #estimate-form input[type="number"],
+      #estimate-form select,
+      #estimate-form textarea {
+        font-family: "Font Awesome 5 Free";
+        border: 2px solid #1c3444;
+        border-radius: 6px;
+        background-color: transparent;
+        padding: 0.75em;
+        color: inherit;
+        width: 100%;
+        box-sizing: border-box;
+        height: 3em;
+        /* Consistent height for all inputs */
+      }
+
+      #estimate-form textarea {
+        height: auto;
+        /* Let textarea have its natural height */
+        min-height: 100px;
+      }
+
+      #estimate-form select {
+        height: 3em;
+        /* Explicit height to match other inputs */
+        line-height: 1;
+        /* Better vertical alignment */
+        display: flex;
+        align-items: center;
+      }
+
+      #estimate-form input:focus,
+      #estimate-form select:focus,
+      #estimate-form textarea:focus {
+        outline: none;
+        border-color: #2a5a7a;
+        box-shadow: 0 0 5px rgba(28, 52, 68, 0.5);
+      }
+
+      #estimate-form .radio-group {
+        display: flex;
+        gap: 1em;
+        margin: 0.5em 0;
+      }
+
+      #estimate-form .radio-option {
+        display: flex;
+        align-items: center;
+        gap: 0.5em;
+      }
+
+      #estimate-form input[type="radio"] {
+        -webkit-appearance: none;
+        appearance: none;
+        width: 18px;
+        height: 18px;
+        border: 2px solid #1c3444;
+        border-radius: 50%;
+        position: relative;
+      }
+
+      #estimate-form input[type="radio"]:checked::before {
+        content: "";
+        position: absolute;
+        width: 10px;
+        height: 10px;
+        background-color: #1c3444;
+        border-radius: 50%;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+      }
+
+      #estimate-form select {
+        appearance: none;
+        background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%231c3444'%3e%3cpath d='M7 10l5 5 5-5z'/%3e%3c/svg%3e");
+        background-repeat: no-repeat;
+        background-position: right 0.75em center;
+        background-size: 1em;
+        padding-right: 2.5em;
+      }
+    </style>
+  </head>
+
+  <body class="is-preload">
+    <!-- Wrapper -->
+    <div id="wrapper">
+      <!-- Header -->
+      <header id="header">
+        <a href="index.html" class="logo">Redemption Rigs</a>
+      </header>
+
+      <!-- Nav -->
+      <nav id="nav">
+        <ul class="links">
+          <li><a href="index.html">This is Redemption Rigs</a></li>
+          <li class="active"><a href="generic.html">Free Estimate</a></li>
+          <li><a href="elements.html">Media</a></li>
+        </ul>
+        <!-- <ul class="icons">
+				<li><a href="https://www.instagram.com/archers__creed/" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
+				<li><a href="https://www.youtube.com/@ArcheryUnlocked" class="icon brands fa-youtube"><span class="label">youtube</span></a></li>
+			</ul> -->
+      </nav>
+
+      <!-- Main -->
+      <div id="main">
+        <!-- Post -->
+        <section class="post" style="padding: 2rem;">
+          <header class="major">
+              <img src="images/logo.png" alt="" style="width:20%;height:auto;" />
+            <h1>Free Estimate Form</h1>
+            <p>Send your details for a free estimate!</p>
+          </header>
+
+          <!-- Free Estimate Form -->
+          <form
+            id="estimate-form"
+            method="POST"
+            action="https://formspree.io/f/xwpqqagd"
+            enctype="multipart/form-data"
+          >
+            <div class="fields">
+              <!-- Full Name (two fields for verification) -->
+              <div class="field half">
+                <label for="first-name">First Name</label>
+                <input type="text" name="First Name" id="first-name" required />
+              </div>
+              <div class="field half">
+                <label for="last-name">Last Name</label>
+                <input type="text" name="Last Name" id="last-name" required />
+              </div>
+
+              <!-- Zip Code -->
+              <div class="field">
+                <label for="zip">Zip Code</label>
+                <input
+                  type="text"
+                  name="Zip Code"
+                  id="zip"
+                  pattern="^\d{5}(?:[-\s]\d{4})?$"
+                  title="Please enter a valid US zip code"
+                  required
+                />
+              </div>
+
+              <!-- Email -->
+              <div class="field">
+                <label for="email">Email Address</label>
+                <input
+                  type="email"
+                  name="Email"
+                  id="email"
+                  pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"
+                  title="Please enter a valid email address"
+                />
+              </div>
+
+              <!-- Phone -->
+              <div class="field">
+                <label for="phone">Phone Number</label>
+                <input
+                  type="tel"
+                  name="Phone"
+                  id="phone"
+                  pattern="^(\+\d{1,2}\s)?\(?\d{3}\)?[\s.-]?\d{3}[\s.-]?\d{4}$"
+                  title="Please enter a valid phone number"
+                />
+              </div>
+
+              <!-- Contact Preferences -->
+              <div class="field">
+                <label for="contact-method">Preferred Contact Method</label>
+                <select name="Contact Method" id="contact-method" required>
+                  <option value="" disabled selected>
+                    Select contact method
+                  </option>
+                  <option value="Email">Email</option>
+                  <option value="Phone">Phone</option>
+                  <option value="Text">Text</option>
+                </select>
+              </div>
+
+              <!-- Boat Details -->
+              <div class="field">
+                <label for="boat-model">Boat Model</label>
+                <input type="text" name="Boat Model" id="boat-model" required />
+              </div>
+
+              <div class="field">
+                <label for="boat-size">Boat Length (feet)</label>
+                <input
+                  type="number"
+                  name="Boat Length"
+                  id="boat-size"
+                  min="1"
+                  step="0.1"
+                  required
+                />
+              </div>
+
+              <div class="field">
+                <label for="boat-width">Boat Width (feet)</label>
+                <input
+                  type="number"
+                  name="Boat Width"
+                  id="boat-width"
+                  min="1"
+                  step="0.1"
+                  required
+                />
+              </div>
+
+              <div class="field">
+                <label for="boat-condition">Boat Condition</label>
+                <select name="Boat Condition" id="boat-condition" required>
+                  <option value="" disabled selected>Select condition</option>
+                  <option value="Excellent">Excellent</option>
+                  <option value="Good">Good</option>
+                  <option value="Fair">Fair</option>
+                  <option value="Poor">Poor</option>
+                </select>
+              </div>
+
+              <!-- Image Attachment -->
+              <div class="field">
+                <label for="image-upload">Upload Images (Optional)</label>
+                <input
+                  type="file"
+                  name="image-upload"
+                  id="image-upload"
+                  accept="image/*"
+                  multiple
+                />
+                <small
+                  >&emsp;&emsp;<b
+                    >You can upload multiple images (max 5MB each)</b
+                  ></small
+                >
+              </div>
+
+              <!-- Comments -->
+              <div class="field">
+                <label for="comments"
+                  >Comments (what renovations are you looking for? other
+                  details/questions)</label
+                >
+                <textarea name="Comments" id="comments" rows="3"></textarea>
+              </div>
+            </div>
+            <ul class="actions">
+              <li>
+                <input
+                  type="submit"
+                  value="Request Free Estimate"
+                  class="primary"
+                />
+              </li>
+              <li><input type="reset" value="Reset" /></li>
+            </ul>
+          </form>
+        </section>
+      </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/jquery.scrollex.min.js"></script>
+    <script src="assets/js/jquery.scrolly.min.js"></script>
+    <script src="assets/js/browser.min.js"></script>
+    <script src="assets/js/breakpoints.min.js"></script>
+    <script src="assets/js/util.js"></script>
+    <script src="assets/js/main.js"></script>
+  </body>
+</html>
